@@ -19,8 +19,8 @@ module.exports = createCoreController('api::profile.profile', ({ strapi }) => ({
     const newCount = curr + 1;
 
     let rewardStatus = profile.rewardStatus || 'none';
-    if (newCount === 5) rewardStatus = '15%';
-    if (newCount === 10) rewardStatus = '25%';
+    if (newCount === 5) rewardStatus = 'fifteen';
+    if (newCount === 10) rewardStatus = 'twentyfive';
 
     const updated = await strapi.entityService.update('api::profile.profile', id, {
       data: {
